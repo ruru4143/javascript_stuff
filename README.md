@@ -1,5 +1,8 @@
 here you can find various greasmonkey scripts and bookmarklets.
 
+All [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet) are stored in html files, ready to be opened and bookmarked. The rest are [Greasemonkey](https://en.wikipedia.org/wiki/Greasemonkey) scripts.
+
+
 ## scripts:
 
 * random autoindex - selects a random videofile/folder (depends if a folder exists) in an autoindex
