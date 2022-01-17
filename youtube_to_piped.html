@@ -1,0 +1,13 @@
+<a href="javascript:(function(){
+    var current_page = window.location.href.split('/');
+
+    if (current_page[2] == 'www.youtube.com') {
+        current_page[2] = 'piped.kavin.rocks';
+        window.location.href = current_page.join('/'); 
+    } else {
+        current_page[2] = 'www.youtube.com';
+        window.location.href = current_page.join('/');
+    }
+})();
+">rightclick to bookmark</a>
+
