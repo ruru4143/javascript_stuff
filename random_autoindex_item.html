@@ -1,0 +1,42 @@
+<a href="javascript:(function(){
+    function random_item(items){
+      return items[Math.floor(Math.random()*items.length)];
+    }
+
+    if (document.title.includes('Index of') || document.title.includes('remote:')) {
+
+        var items = document.getElementById('list').children[1].children;
+
+        var directory_urls = new Array();
+        var videos = new Array();
+
+        for(i = 0; true; i++) {
+           if (items[i] != undefined) {
+                 if (((items[i].children[0].firstChild.innerText != 'Parent directory/')) &&
+                         (items[i].children[1].outerHTML == '<td>-</td>')) {
+              directory_urls.push(items[i].firstChild.firstChild.href);
+           }
+                 if ((items[i].children[0].firstChild.innerText != 'Parent directory/') &&
+             ((items[i].firstChild.firstChild.href.slice(-4) == '.mp4') ||
+             (items[i].firstChild.firstChild.href.slice(-4) == '.avi') ||
+             (items[i].firstChild.firstChild.href.slice(-4) == '.mp3') ||
+             (items[i].firstChild.firstChild.href.slice(-4) == '.webm') ||
+             (items[i].firstChild.firstChild.href.slice(-4) == '.mkv')))
+             {
+              videos.push(items[i].firstChild.firstChild.href);
+           }}
+                else {
+              break;
+           }
+        }
+
+        if (directory_urls.length == 0) {
+                window.location.href = random_item(videos);
+        }
+        else {
+            window.location.href = random_item(directory_urls);
+        }
+    }
+})();
+">rightclick to bookmark</a>
+
