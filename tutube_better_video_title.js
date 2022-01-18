@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name     better tutube title
+// @name     better tutube video title
 // @version  1
 // @grant    none
 // @run-at 	 document-end
@@ -18,7 +18,7 @@ waitForKeyElements (() => {
   if (title[0].textContent.length > 0 &&
      serie_title[0].textContent.length > 0)
   {
-    return title; // just return any element to make waitForKeyElements happy
+  	return title; // just return any element to make waitForKeyElements happy
   }
   return null;
 }, change_title);
